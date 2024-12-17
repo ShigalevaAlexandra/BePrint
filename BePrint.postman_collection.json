@@ -1,0 +1,527 @@
+{
+	"info": {
+		"_postman_id": "0dc0ce03-56a3-4fad-9ac7-dee341a3d404",
+		"name": "BePrint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31099772"
+	},
+	"item": [
+		{
+			"name": "registration user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "Иван",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Иванов",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+7(999)999-99-99",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/registration",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Password1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/authorization",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"authorization"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3gThjMamxW-l5h85SR8qEBKQs3Dj-4gl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/account",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3gThjMamxW-l5h85SR8qEBKQs3Dj-4gl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Календарь без пружин",
+							"type": "text"
+						},
+						{
+							"key": "type_id",
+							"value": "Календари ТРИО",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "хороший\nпредновогодний\\nподарок\nпостоянным клиентам\nи\\nпартнёрам",
+							"type": "text"
+						},
+						{
+							"key": "photo_service",
+							"type": "file",
+							"src": "_uzMIWP_O/47403.970.png"
+						},
+						{
+							"key": "price",
+							"value": "260",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/services/add",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"services",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all services",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3gThjMamxW-l5h85SR8qEBKQs3Dj-4gl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/services",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "change service",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "3gThjMamxW-l5h85SR8qEBKQs3Dj-4gl",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "description",
+							"value": "тот самый подарок на новый год",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "260",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/services/edit?id_service=3",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"services",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "id_service",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search service",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/services/search?typesServices=тр",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"services",
+						"search"
+					],
+					"query": [
+						{
+							"key": "typesServices",
+							"value": "тр"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "G2HohH2OCTJlb1mb4zDTX1I2rNU48oNT",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "service_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "count",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/cart/add",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"cart",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "items cart",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "G2HohH2OCTJlb1mb4zDTX1I2rNU48oNT",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "count",
+							"value": "3",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/cart",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "del cart",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "T6-rwzol149h3hwR4BIQXQ0U8L-0YeM3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/cart/del?id_cart=3",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"cart",
+						"del"
+					],
+					"query": [
+						{
+							"key": "id_cart",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "hJ2qgei5t_8uTdjvg_27RgGMN_tMCZic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "+7(843)435-23-23",
+							"type": "text"
+						},
+						{
+							"key": "date_desired",
+							"value": "2024-11-19",
+							"type": "text"
+						},
+						{
+							"key": "payment_type",
+							"value": "онлайн",
+							"type": "text"
+						},
+						{
+							"key": "comments",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/order/add",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"order",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "hJ2qgei5t_8uTdjvg_27RgGMN_tMCZic",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://pr-shigaleva.xn--80ahdri7a.site/api/orders",
+					"protocol": "https",
+					"host": [
+						"pr-shigaleva",
+						"xn--80ahdri7a",
+						"site"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
